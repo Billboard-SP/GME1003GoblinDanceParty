@@ -81,6 +81,10 @@ namespace GME1003GoblinDanceParty
             }
 
             //ToDo: List of transparency values
+            for (float i = 0; i < _numStars; i++)
+            {
+                _starTransparency.Add((float)_rng.NextDouble() * (max - min) + min);
+            }
 
             //ToDo: List of rotation values
 
