@@ -23,7 +23,7 @@ namespace GME1003GoblinDanceParty
         private List <Color> _starColor;       //let's have fun with colour!!
         private List <float> _starScale;       //star size
         private List <float> _starTransparency;//star transparency
-        private float _starRotation;    //star rotation
+        private List <float> _starRotation;    //star rotation
 
 
         //***This is for the goblin. Ignore it.
@@ -48,7 +48,7 @@ namespace GME1003GoblinDanceParty
             _starColor = new List<Color>();                   //this is a "relatively" easy way to create random colors
             _starScale = new List<float>(); //this will affect the size of the stars
             _starTransparency = new List<float>();   //star transparency
-            _starRotation = _rng.Next(0, 101) / 100f;       //star rotation
+            _starRotation = new List<float>();       //star rotation
 
             //use a separate for loop for each list - for practice
             //List of X coordinates
