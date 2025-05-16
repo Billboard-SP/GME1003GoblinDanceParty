@@ -73,6 +73,12 @@ namespace GME1003GoblinDanceParty
             }
 
             //ToDo: List of scale values
+            float min = 0.25f;
+            float max = 1.0f;
+            for (float i = 0; i < _numStars; i++)
+            {
+                _starScale.Add((float)_rng.NextDouble() * (max - min) + min);
+            }
 
             //ToDo: List of transparency values
 
