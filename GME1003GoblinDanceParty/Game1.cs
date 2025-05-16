@@ -87,6 +87,10 @@ namespace GME1003GoblinDanceParty
             }
 
             //ToDo: List of rotation values
+            for (float i = 0; i < _numStars; i++)
+            {
+                _starRotation.Add((float)_rng.NextDouble());
+            }
 
 
             base.Initialize();
