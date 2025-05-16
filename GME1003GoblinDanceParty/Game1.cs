@@ -64,7 +64,14 @@ namespace GME1003GoblinDanceParty
             }
 
             //ToDo: List of Colors
-            
+            for (int i = 0; i < _numStars; i++)
+            {
+                _starColor.Add(new Color(
+                    128 + _rng.Next(0, 128),
+                    128 + _rng.Next(0, 128),
+                    128 + _rng.Next(0, 128)));
+            }
+
             //ToDo: List of scale values
 
             //ToDo: List of transparency values
