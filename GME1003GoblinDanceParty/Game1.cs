@@ -104,6 +104,9 @@ namespace GME1003GoblinDanceParty
             //load out star sprite
             _starSprite = Content.Load<Texture2D>("starSprite");
 
+            //load rave
+            _rave = Content.Load<Texture2D>("rave");
+
 
             //***This is for the goblin. Ignore it for now.
             goblin = new Goblin(Content.Load<Texture2D>("goblinIdleSpriteSheet"), 400, 400);
@@ -138,17 +141,17 @@ namespace GME1003GoblinDanceParty
             _spriteBatch.Draw(_rave, new Rectangle(0, 0, _graphics.PreferredBackBufferWidth, _graphics.PreferredBackBufferHeight), Color.White);
 
             //this is where we draw the stars...
-            for (int i = 0; i < _numStars; i++) 
+            for (int i = 0; i < _numStars; i++)
             {
-                _spriteBatch.Draw(_starSprite, 
+                _spriteBatch.Draw(_starSprite,
                     new Vector2(_starsX[i], _starsY[i]),    //set the star position
                     null,                                   //ignore this
-                    _starColor * _starTransparency,         //set colour and transparency
-                    _starRotation,                          //set rotation
+                    _starColor[i] * _starTransparency[i],         //set colour and transparency
+                    _starRotation[i],                        //set rotation
                     new Vector2(_starSprite.Width / 2, _starSprite.Height / 2), //ignore this
-                    new Vector2(_starScale, _starScale),    //set scale (same number 2x)
+                    new Vector2(_starScale[i], _starScale[i]),    //set scale (same number 2x)
                     SpriteEffects.None,                     //ignore this
-                    0f);                                    //ignore this
+                    0f);
             }
             _spriteBatch.End();
 
